@@ -767,24 +767,23 @@ if __name__ == '__main__':
 
 
 /templates/results.html
-```html
+```javascript
 <!DOCTYPE html>
 <html lang="en">
 <html>
    <body>
       <table border = 1>
-      ```javascript
+
          {% for key, value in result.items() %}
             <tr>
                <th> {{ key }} </th>
                <td> {{ value }} </td>
             </tr>
          {% endfor %}
-         ```
+
       </table>
    </body>
-</html>
-````
+```
 ![png](Result_page.png)
 
 
