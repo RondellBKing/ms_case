@@ -766,24 +766,7 @@ if __name__ == '__main__':
 ![png](Web_landing_page.png)
 
 
-/templates/results.html
-```javascript
-<!DOCTYPE html>
-<html lang="en">
-<html>
-   <body>
-      <table border = 1>
-
-         {% for key, value in result.items() %}
-            <tr>
-               <th> {{ key }} </th>
-               <td> {{ value }} </td>
-            </tr>
-         {% endfor %}
-
-      </table>
-   </body>
-```
+[a link]([a link](https://github.com/RondellBKing/ms_case/blob/master/templates/result.html)
 ![png](Result_page.png)
 
 
