@@ -691,7 +691,7 @@ Questions
 •	What are potential uses of these data? 
 •	Create a simple web app where sales people or traders can input the information that is passed to them
 •	What other fields, optional or non-optional, would you add to the above?
-![image.png](attachment:image.png)
+
 
 To run this simple app do run below in cmd/terminal. Then open -> http://127.0.0.1:5000/
 ---> python case_study_part_2.py
@@ -737,7 +737,51 @@ if __name__ == '__main__':
     127.0.0.1 - - [16/Feb/2019 06:30:44] "POST /result HTTP/1.1" 200 -
 
 
-
-```python
+## Proposal Diagram 
+![image.png](attachment:Potato_pricer_proposal.png)
+/templates/index.html
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Potato storage fee</title>
+</head>
+<body>
+      <form action = "http://localhost:5000/result" method = "POST">
+         <p>Product ID<input type = "text" name = "Product ID " /></p>
+         <p>Client ID<input type = "text" name = "Client ID " /></p>
+         <p>Employee ID<input type = "text" name = "Employee ID" /></p>
+         <p>Storage Fee<input type ="text" name = "Storage Fee" /></p>
+          <p>Date <input type ="date" name = "Date" /></p>
+         <p><input type="radio" name="source" value="word of mouth"> word of mouth<br></p>
+         <p><input type="radio" name="source" value="bloomberg chat"> bloomberg chat<br></p>
+         <p><input type="radio" name="source" value="client meeting"> client meeting</p>
+         <p><input type = "submit" value = "submit" /></p>
+      </form>
+   </body>
+</html>
 
 ```
+![image.png](attachment:Web_landing_page.png)
+
+/templates/results.html
+```html
+<!DOCTYPE html>
+<html lang="en">
+<html>
+   <body>
+      <table border = 1>
+         {% for key, value in result.items() %}
+            <tr>
+               <th> {{ key }} </th>
+               <td> {{ value }} </td>
+            </tr>
+         {% endfor %}
+      </table>
+   </body>
+</html>
+'''
+
+![image.png](attachment:Result_page.png)
+
