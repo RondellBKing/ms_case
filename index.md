@@ -772,12 +772,14 @@ if __name__ == '__main__':
 <html>
    <body>
       <table border = 1>
+      <script\>.
          {% for key, value in result.items() %}
             <tr>
                <th> {{ key }} </th>
                <td> {{ value }} </td>
             </tr>
          {% endfor %}
+         </script\>
       </table>
    </body>
 </html>
