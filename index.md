@@ -766,7 +766,7 @@ if __name__ == '__main__':
 ![png](Web_landing_page.png)
 
 
-[a link]([result.html](https://github.com/RondellBKing/ms_case/blob/master/templates/result.html)
+[a link][result.html](https://github.com/RondellBKing/ms_case/blob/master/templates/result.html)
 ![png](Result_page.png)
 
 
