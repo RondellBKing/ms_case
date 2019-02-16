@@ -738,7 +738,7 @@ if __name__ == '__main__':
 
 
 ## Proposal Diagram 
-![image.png](attachment:Potato_pricer_proposal.png)
+![png](Potato_pricer_proposal.png)
 /templates/index.html
 ```html
 <!DOCTYPE html>
@@ -763,7 +763,8 @@ if __name__ == '__main__':
 </html>
 
 ```
-![image.png](attachment:Web_landing_page.png)
+![png](Web_landing_page.png)
+
 
 /templates/results.html
 ```html
@@ -783,7 +784,8 @@ if __name__ == '__main__':
       </table>
    </body>
 </html>
-'''
+```
+![png](Result_page.png)
 
-![image.png](attachment:Result_page.png)
+
 
