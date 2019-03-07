@@ -1,20 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Potato storage fee</title>
+<meta charset="UTF-8">
+<title>Potato Pricer</title>
+<!-- Load React API -->
+<script src= "https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<!-- Load React DOM-->
+<script src= "https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<!-- Load Babel Compiler -->
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 </head>
-<body>
-      <form action = "http://localhost:5000/result" method = "POST">
-         <p>Product ID<input type = "text" name = "Product ID " /></p>
-         <p>Client ID<input type = "text" name = "Client ID " /></p>
-         <p>Employee ID<input type = "text" name = "Employee ID" /></p>
-         <p>Storage Fee<input type ="text" name = "Storage Fee" /></p>
-          <p>Date <input type ="date" name = "Date" /></p>
-         <p><input type="radio" name="source" value="word of mouth"> word of mouth<br></p>
-         <p><input type="radio" name="source" value="bloomberg chat"> bloomberg chat<br></p>
-         <p><input type="radio" name="source" value="client meeting"> client meeting</p>
-         <p><input type = "submit" value = "submit" /></p>
-      </form>
-   </body>
+    <body>
+    <h1>Please enter potato pricing below</h1>
+    <div id = "root">  </div>
+        <form action = "http://localhost:5000/result" method = "POST">
+         <p>Product ID<input type = "text" name = "Product ID " required autocomplete autofocus/></p>
+         <p>Client ID<input type = "text" name = "Client ID " required /></p>
+            <!-- Default should be the current user -->
+         <p>Employee ID<input type = "text" name = "Employee ID" required /></p>
+         <p>Storage Fee<input type ="text" name = "Storage Fee" required /></p>
+            <!-- Cannot input prices that are very old -->
+          <p>Date <input type ="date" name = "Date" min="01/01/2019"/></p>
+            <select name="source" >
+         <option value="word of mouth"> word of mouth<br></option>
+         <option value="bloomberg chat"> bloomberg chat<br></option>
+         <option value="client meeting"> client meeting</option>
+         <input type = "submit" value = "submit" />
+         Upload Pricing file: (Optional) <input type="file" name="myFile">
+            </select>
+        </form>
+    <script type="text/babel">
+class Welcome extends React.Component {
+    // fires before component is mounted
+    constructor(props) {
+
+        // makes this refer to this component
+        super(props);
+
+        // set local state
+        this.state = {
+            date: new Date()
+        };
+
+    }
+    render() { return(<h1>Welcome {this.props.name} </h1>); }
+}
+ReactDOM.render(<Welcome name="Rondell"/>, document.getElementById('root'));
+    </script>
+    </body>
 </html>
